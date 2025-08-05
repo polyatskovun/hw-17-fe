@@ -1,0 +1,14 @@
+@use 'variables' as v;
+
+.btn{
+    display: block;
+    margin: 50px auto 0 auto;
+    
+    width: 180px;
+    height: 46px;
+    color: #fff;
+    background-color: v.$button-bg;
+    line-height: 1.67;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}

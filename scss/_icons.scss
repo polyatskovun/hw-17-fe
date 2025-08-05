@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+.socials{
+    display: flex;
+    gap: 23px;
+}
+
+.socials__icon{
+    width: 50px;
+    height: 50px;
+    border: solid 1px v.$icon;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    fill: v.$icon;
+}
+
+.socials__icon:hover{
+    background-color: v.$icon;
+     .icon{
+        fill: #fff;
+     }
+}

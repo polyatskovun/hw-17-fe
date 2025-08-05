@@ -1,0 +1,437 @@
+@use 'importer' as i;
+
+.flex-container{
+    @include i.d-flex(row, center, center, 0)
+}
+
+.header{
+    padding: 41px 0;
+
+    .burger{
+        padding-left: 40px;
+        display: none;
+    }
+
+    .logo{
+        flex: 1 1 auto;
+    }
+
+    .nav__list{
+        @include i.d-flex(row, center, center, 42px);
+        margin-right: 84px;
+    }
+
+    .nav__link{
+        color: i.$main-color;
+        text-transform: uppercase;
+        font-size: 0.88rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 15%;
+            bottom: -5px;
+            height: 1px;
+            width: 70%;
+            background-color: #000;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
+    .search{
+        cursor: pointer;
+    }
+}
+
+.hero{
+    background: url('../assets/img/bg.jpg')0 0 / 100% 123%;
+    padding: 100px 0 380px 0;
+
+    h1{
+        @include i.font(i.$font-family-red-hat, 3rem, 600, 1.3, 2.4px);
+    }
+}
+
+.blog{
+
+    h2{
+        @include i.font(i.$font-family-red-hat, 3rem, 400, 1.3, 2.4px);
+        margin-bottom: 50px;
+    }
+
+    &__wrapper{
+        @include i.d-flex(row, center, center, 30px);
+        height: 470px;
+    }
+
+
+    &__image{
+        flex-basis: 50%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__info{
+        height: 100%;
+        padding-top: 85px;
+        padding-bottom: 85px;
+        flex-basis: 50%;
+    }
+
+    &__subtitle{
+        @include i.font(inherit, inherit, inherit, 1.66, 1.6px);
+        color: i.$color-gray-500;
+        margin-bottom: 30px;
+    }
+
+    &__title{
+        @include i.font(i.$font-family-red-hat, 1.44rem, 500, 1.66, 2.3px);
+        margin-bottom: 15px;
+    }
+
+    &__date{
+        @include i.font(inherit, inherit, inherit, 1.66, 1.6px);
+        color: i.$color-gray-500;
+        margin-bottom: 50px;
+    }
+
+    &__text{
+        @include i.font(inherit, inherit, inherit, 1.66, 0.8px);
+        color: i.$color-gray-700;
+        display: inline;
+    }
+
+    a{
+        color: i.$color-gray-500;
+        position: relative;
+    }
+
+    a::after{
+        content: '';
+        background-image: url('../assets/img/icons/Arrow_1.svg');
+        background-position: right;
+        position: absolute;
+        width: 40px;
+        height: 13px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 50%;
+        right: -43px;
+        transform: translateY(-40%);
+    }
+}
+
+.section{
+
+    .heading{
+
+        margin-bottom: 50px;
+
+        @include i.d-flex(row, space-between, center, 0);
+
+        .section-title{
+            @include i.font(i.$font-family-red-hat, 1.75rem, 600, 1.66, 2.8px);
+        }
+
+        .view-all{
+            padding-right: 43px;
+            display: inline-block;
+
+            a{
+                @include i.font(inherit, inherit, inherit, 1.67, 1.6px);
+                color: i.$color-gray-500;
+                position: relative;
+            }
+
+            a::after{
+                content: '';
+                background-image: url('../assets/img/icons/Arrow_1.svg');
+                position: absolute;
+                width: 26px;
+                height: 16px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: 50%;
+                right: -43px;
+                transform: translateY(-30%);
+            }
+        }
+    }
+
+    .cards__container{
+        @include i.d-flex(row, space-between, flex-start, 0);
+        flex-wrap: wrap;
+    }
+
+    .post__card{
+        max-width: 370px;
+    }
+
+    .popular__card{
+        max-width: calc((100% - 20px)/2);
+    }
+}
+
+.job{
+    @include i.d-flex(row, space-between, flex-start, 20px);
+
+    &__title{
+        @include i.font(i.$font-family-red-hat, 1.44rem, inherit, 1.66, 2.3px);
+        max-width: 470px;
+
+        a{
+            position: relative;
+        }
+
+        a::after{
+            content: '';
+            background-image: url('../assets/img/icons/Arrow_1.svg');
+            position: absolute;
+            width: 26px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 10px;
+            left: 0;
+        }
+    }
+
+    &__desk{
+        @include i.font(inherit, 1.19rem, inherit, 2, 1px);
+        max-width: 45%;
+
+        p:first-child{
+            margin-bottom: 25px;
+        }
+    }
+
+    
+}
+
+.footer{
+    padding: 70px 0 30px 0;
+    background-color: i.$footer-bg;
+
+    &__info{
+        @include i.d-flex(row, space-between, center, 0);
+        margin-bottom: 20px;
+    }
+
+    .contacts{
+
+        &__title{
+            @include i.font(i.$font-family-red-hat, 3rem, inherit, 1.3, 2.4px);
+            margin-bottom: 30px;
+        }
+
+        .tel{
+            margin-bottom: 15px;
+        }
+
+        .contact{
+            @include i.font(inherit, inherit, inherit, 1.66, 1.6px);
+        }
+    }
+
+    .copyright{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1140px) {
+    .container{
+        padding: 0 34px;
+    }
+
+    .section{
+        .post__card{
+            max-width: 45%;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .blog{
+
+        &__info{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header{
+        padding: 20px 0;
+
+        .nav{
+            display: none;
+        }
+
+        .burger{
+            display: block;
+        }
+    }
+
+    .hero{
+        padding: 30px 0 190px 0;
+
+        h1{
+            @include i.font(i.$font-family-red-hat, 2.25rem, 600, 1.39, 1.8px);
+        }
+    }
+
+    .blog{
+
+        &__wrapper{
+            gap: 20px;
+            max-height: 280px;
+            padding: 0;
+        }
+
+        &__subtitle{
+            margin-bottom: 9%;
+        }
+
+        &__info{
+            padding: 0;
+        }
+
+        &__date{
+            margin-bottom: 3%;
+        }
+
+        &__text{
+            height: 80px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        a::after{
+            top: 20%;
+            right: 0px;
+            transform: translateY(-50%);
+            background-color: #fff;
+        }
+    }
+
+    .cards__container{
+        flex-wrap: wrap;
+    }
+
+    .section{
+        .post__card{
+            max-width: 100%;
+            flex-direction: row;
+            gap: 20px;
+
+            .card__image, .card__desc{
+                flex-basis: 50%;
+            }
+        }
+
+        .post__card:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .job{
+        flex-direction: column;
+        gap: 70px;
+
+        .job__desk{
+            max-width: 100%;
+            text-align: end;
+        }
+    }
+
+    .footer{
+        &__info{
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .contacts{
+            text-align: center;
+        }
+    }
+    
+}
+
+@media (max-width: 710px) {
+    .blog {
+
+        &__title, &__text{
+            line-height: 1.3;
+        }
+
+        a::after{
+            transform: translateY(-5%);
+        }
+    }
+}
+
+@media (max-width: 594px) {
+
+    .hero{
+        background: url('../assets/img/bg.jpg')50% / 230% 100%;
+    }
+    
+    .blog {
+
+        &__wrapper{
+            max-height: 600px;
+            height: auto;
+            padding: 0;
+            flex-direction: column-reverse;
+        }
+
+        &__wrapper:nth-child(2){
+            flex-direction: column;
+        }
+
+        &__title, &__text{
+            line-height: 1.66;
+        }
+
+        a::after{
+            transform: translateY(-50%);
+        }   
+    }
+
+    .section{
+
+        .heading{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .cards__container{
+
+            .card{
+                flex-direction: column;
+            }
+
+            .popular__card{
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

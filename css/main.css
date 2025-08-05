@@ -1,0 +1,584 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html, body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.pl-120 {
+  padding-left: 11%;
+}
+
+.pr-120 {
+  padding-right: 10%;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.card {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+.card__image {
+  width: 100%;
+}
+.card__image img {
+  height: 260px;
+  width: 100%;
+}
+.card__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  letter-spacing: 1.2px;
+  color: #7B7B7B;
+  padding-bottom: 25px;
+}
+.card__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.67;
+  letter-spacing: 2.2px;
+  margin-bottom: 25px;
+}
+.card__text {
+  line-height: 1.67;
+  letter-spacing: 0.8px;
+  color: #565656;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 180px;
+  height: 46px;
+  color: #fff;
+  background-color: #565656;
+  line-height: 1.67;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.socials {
+  display: flex;
+  gap: 23px;
+}
+
+.socials__icon {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #565656;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: #565656;
+}
+
+.socials__icon:hover {
+  background-color: #565656;
+}
+.socials__icon:hover .icon {
+  fill: #fff;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.header {
+  padding: 41px 0;
+}
+.header .burger {
+  padding-left: 40px;
+  display: none;
+}
+.header .logo {
+  flex: 1 1 auto;
+}
+.header .nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin-right: 84px;
+}
+.header .nav__link {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  position: relative;
+}
+.header .nav__link::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: -5px;
+  height: 1px;
+  width: 70%;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.header .nav__link:hover::after {
+  transform: scaleX(1);
+}
+.header .search {
+  cursor: pointer;
+}
+
+.hero {
+  background: url("../img/bg.jpg") 0 0/100% 123%;
+  padding: 100px 0 380px 0;
+}
+.hero h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 2.4px;
+}
+
+.blog h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 2.4px;
+  margin-bottom: 50px;
+}
+.blog__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 470px;
+}
+.blog__image {
+  flex-basis: 50%;
+  height: 100%;
+}
+.blog__image img {
+  width: 100%;
+  height: 100%;
+}
+.blog__info {
+  height: 100%;
+  padding-top: 85px;
+  padding-bottom: 85px;
+  flex-basis: 50%;
+}
+.blog__subtitle {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.66;
+  letter-spacing: 1.6px;
+  color: #7B7B7B;
+  margin-bottom: 30px;
+}
+.blog__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.44rem;
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: 2.3px;
+  margin-bottom: 15px;
+}
+.blog__date {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.66;
+  letter-spacing: 1.6px;
+  color: #7B7B7B;
+  margin-bottom: 50px;
+}
+.blog__text {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.66;
+  letter-spacing: 0.8px;
+  color: #565656;
+  display: inline;
+}
+.blog a {
+  color: #7B7B7B;
+  position: relative;
+}
+.blog a::after {
+  content: "";
+  background-image: url("../img/icons/Arrow_1.svg");
+  background-position: right;
+  position: absolute;
+  width: 40px;
+  height: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  right: -43px;
+  transform: translateY(-40%);
+}
+
+.section .heading {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.section .heading .section-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.66;
+  letter-spacing: 2.8px;
+}
+.section .heading .view-all {
+  padding-right: 43px;
+  display: inline-block;
+}
+.section .heading .view-all a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.67;
+  letter-spacing: 1.6px;
+  color: #7B7B7B;
+  position: relative;
+}
+.section .heading .view-all a::after {
+  content: "";
+  background-image: url("../img/icons/Arrow_1.svg");
+  position: absolute;
+  width: 26px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  right: -43px;
+  transform: translateY(-30%);
+}
+.section .cards__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.section .post__card {
+  max-width: 370px;
+}
+.section .popular__card {
+  max-width: calc((100% - 20px) / 2);
+}
+
+.job {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.job__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.44rem;
+  font-weight: inherit;
+  line-height: 1.66;
+  letter-spacing: 2.3px;
+  max-width: 470px;
+}
+.job__title a {
+  position: relative;
+}
+.job__title a::after {
+  content: "";
+  background-image: url("../img/icons/Arrow_1.svg");
+  position: absolute;
+  width: 26px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 10px;
+  left: 0;
+}
+.job__desk {
+  font-family: inherit;
+  font-size: 1.19rem;
+  font-weight: inherit;
+  line-height: 2;
+  letter-spacing: 1px;
+  max-width: 45%;
+}
+.job__desk p:first-child {
+  margin-bottom: 25px;
+}
+
+.footer {
+  padding: 70px 0 30px 0;
+  background-color: #F4F4F4;
+}
+.footer__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 20px;
+}
+.footer .contacts__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: inherit;
+  line-height: 1.3;
+  letter-spacing: 2.4px;
+  margin-bottom: 30px;
+}
+.footer .contacts .tel {
+  margin-bottom: 15px;
+}
+.footer .contacts .contact {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.66;
+  letter-spacing: 1.6px;
+}
+.footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 34px;
+  }
+  .section .post__card {
+    max-width: 45%;
+  }
+}
+@media (max-width: 850px) {
+  .blog__info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .burger {
+    display: block;
+  }
+  .hero {
+    padding: 30px 0 190px 0;
+  }
+  .hero h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.39;
+    letter-spacing: 1.8px;
+  }
+  .blog__wrapper {
+    gap: 20px;
+    max-height: 280px;
+    padding: 0;
+  }
+  .blog__subtitle {
+    margin-bottom: 9%;
+  }
+  .blog__info {
+    padding: 0;
+  }
+  .blog__date {
+    margin-bottom: 3%;
+  }
+  .blog__text {
+    height: 80px;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .blog a::after {
+    top: 20%;
+    right: 0px;
+    transform: translateY(-50%);
+    background-color: #fff;
+  }
+  .cards__container {
+    flex-wrap: wrap;
+  }
+  .section .post__card {
+    max-width: 100%;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .section .post__card .card__image, .section .post__card .card__desc {
+    flex-basis: 50%;
+  }
+  .section .post__card:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+  .job {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .job .job__desk {
+    max-width: 100%;
+    text-align: end;
+  }
+  .footer__info {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .contacts {
+    text-align: center;
+  }
+}
+@media (max-width: 710px) {
+  .blog__title, .blog__text {
+    line-height: 1.3;
+  }
+  .blog a::after {
+    transform: translateY(-5%);
+  }
+}
+@media (max-width: 594px) {
+  .hero {
+    background: url("../img/bg.jpg") 50%/230% 100%;
+  }
+  .blog__wrapper {
+    max-height: 600px;
+    height: auto;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .blog__wrapper:nth-child(2) {
+    flex-direction: column;
+  }
+  .blog__title, .blog__text {
+    line-height: 1.66;
+  }
+  .blog a::after {
+    transform: translateY(-50%);
+  }
+  .section .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .section .cards__container .card {
+    flex-direction: column;
+  }
+  .section .cards__container .popular__card {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
